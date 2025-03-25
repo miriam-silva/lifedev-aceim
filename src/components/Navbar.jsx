@@ -3,13 +3,20 @@ import { useStat } from 'react'
 import styles from './Navbar.module.css'
 
 const Navbar = () => {
-    const [user, setUser] = useState({name:'Ana', idade:19})
+  const [user, setUser] = useState({ name: 'Ana', idade: 19 })
   return (
     <>
       <nav className={styles.navbar}>
-        <p>{user.name}</p>
-        <p>{user.idade}</p>
-        <button onClick={() => setUser((prevUser) => ({...prevUser, idade:prevUser.idade + 1}))}>Aumenta idade</button>
+        <ul className={styles.link_list}>
+          <li>Home</li>
+          <li>Register</li>
+          <li>New Post</li>
+          <li>Dasboard</li>
+          <li>About Us</li>
+          <li>
+            <button className={styles.logout}>Exit</button>
+          </li>
+        </ul>
       </nav>
     </>
   )
