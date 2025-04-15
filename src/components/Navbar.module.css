@@ -20,6 +20,10 @@
     list-style: none;
 }
  
+.links_list li{
+    margin-right: 1em;
+}
+ 
 .links_list li a{
     padding: .4em .6em;
 }
@@ -28,11 +32,8 @@
     background-color: #000;
     color: #fff;
 }
-.logout{
-    width: 60px;
-    background-color: darkturquoise;
+
+.exit{
+    background-color: transparent;
     border: none;
-    border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
 }
