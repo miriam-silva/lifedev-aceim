@@ -1,6 +1,7 @@
 import styles from './Login.module.css';
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { useAuthentication } from '../../hooks/useAuthentication'
+import { useState } from "react"
 
 const Login = () => {
     const [email, setEmail] = useState("")
@@ -44,7 +45,7 @@ const Login = () => {
                     <input type='password' name='password' required placeholder='Insira sua senha' onChange={(e) => setPassword(e.target.value)} value={password} />
                 </label>
                 {!loading && <button className='btn'>Entrar</button>}
-                {loading && <button className='btn' disabled>Aguarde sua anta...</button>}
+                {!loading && <button className='btn' disabled>Aguarde...</button>}
                 {error && <p>{error}</p>}
             </form>
         </div>
