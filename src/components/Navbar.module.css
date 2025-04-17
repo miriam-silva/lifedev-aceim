@@ -1,6 +1,6 @@
 .navbar{
     display: flex;
-    box-shadow: rgba(0, 0, 0, .15) 0px -2px 10 0px;
+    box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
     justify-content: space-between;
     align-items: center;
     padding: .5em 2em;
@@ -13,8 +13,13 @@
 .brand span{
     font-weight: 900;
     text-transform: uppercase;
+    font-size: 19.2px;
 }
  
+.corrigindo{
+    font-size: 19.2px !important;
+}
+
 .links_list{
     display: flex;
     list-style: none;
@@ -22,18 +27,19 @@
  
 .links_list li{
     margin-right: 1em;
+    font-size: 16px;
 }
  
 .links_list li a{
-    padding: .4em .6em;
+    padding: 0.4em 0.6em;
 }
  
 .active{
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 .exit{
-    background-color: transparent;
     border: none;
+    background-color: transparent;
 }

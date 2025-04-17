@@ -1,4 +1,4 @@
-import styles from './Login.module.css';
+import styles from './Login.module.css'
 import { useEffect } from "react"
 import { useAuthentication } from '../../hooks/useAuthentication'
 import { useState } from "react"
@@ -36,16 +36,16 @@ const Login = () => {
             <h1>Entrar</h1>
             <p>Faça login em nossa plataforma de desenvolvedores</p>
             <form onSubmit={handlerSubmit}>
-                <label>
+                <label className={styles.corrigindo}>
                     <span>E-mail</span>
                     <input type='email' name='email' required placeholder='E-mail do usuário' onChange={(e) => setEmail(e.target.value)} value={email} />
                 </label>
                 <label>
-                    <span>Senha</span>
+                    <span className={styles.corrigindo2}>Senha</span>
                     <input type='password' name='password' required placeholder='Insira sua senha' onChange={(e) => setPassword(e.target.value)} value={password} />
                 </label>
-                {!loading && <button className='btn'>Entrar</button>}
-                {!loading && <button className='btn' disabled>Aguarde...</button>}
+                {!loading && <button className={`btn ${styles.corrigindo3}`}>Entrar</button>}
+                {loading && <button className='btn' disabled>Aguarde...</button>}
                 {error && <p>{error}</p>}
             </form>
         </div>

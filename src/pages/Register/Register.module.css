@@ -1,17 +1,43 @@
-
-.login {
+.cadastro {
   text-align: center;
 }
- 
-.login p {
+
+
+.form{
+  margin-top: -5px;
+}
+
+.cadastro p {
   color: #aaa;
 }
 
-
-.register {
-  text-align: center;
+.caixadeinput{
+  width: 100%;
+  padding: .8em 0;
 }
- 
-.register p {
-  color: #aaa;
+
+label{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1px;
+}
+
+label span{
+  margin-top: 5px;
+}
+
+.senha{
+  margin-top: 4px;
+}
+
+.confirmesenha{
+  margin-top: 4px;
+}
+
+.email{
+  margin-top: 4px;
+}
+
+.corrigindo3{
+  margin-top: 29px;
 }

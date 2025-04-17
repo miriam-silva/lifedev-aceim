@@ -5,9 +5,9 @@ const Footer = () => {
     return (
         <>
         <footer className={styles.footer}>
-            <h3>Plataforma de Postagens para Desenvolvimento</h3>
+            <h3>Plataforma de Postagens para Desenvolvedores</h3>
             <p>Compartilhamento de experiências de Nomade Life Dev</p>
-            <p>Eloisa Solidária</p>
+            <p>Colheita Solidária&#174; 2025&#169;</p>
         </footer> 
     </> 
     )

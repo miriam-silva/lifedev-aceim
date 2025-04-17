@@ -1,34 +1,23 @@
 import styles from './Navbar.module.css'
+import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
 
   return (
     <>
       <nav className={styles.navbar}>
-        <ul className={styles.link_list}>
-          <li>
-            <a href="#">
-              <span>Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Register</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>About Us</span>
-            </a>
-          </li>
-          <li>
-            <button className={styles.exit}>Exit</button>
-          </li>
+        <ul className={styles.links_list}>
+          <NavLink to="/" className={`${styles.brand} ${styles.active}`}>
+            <li className={styles.corrigindo}><span>Life</span>Dev</li>
+          </NavLink>
+          <NavLink to="/login" className={`${styles.brand} ${styles.active}`}>
+            <li>Login</li>
+          </NavLink>
+          <NavLink to="/criar-usuario" className={`${styles.brand} ${styles.active}`}>
+            <li>Register</li>
+          </NavLink>
+          
+          <button className={styles.exit}>Exit</button>
         </ul>
       </nav>
     </>
