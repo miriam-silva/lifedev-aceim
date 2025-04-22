@@ -1,14 +1,7 @@
 import {useState, useEffect} from "react"
 import {db} from "../firebase/config"
-import {
-    collect, 
-    query, 
-    orderBy, 
-    onSnapshot, 
-    where,
+import {doc, deleteDoc} from "firebase/firestore"
 
-} from "firebase/firestore"
-
-export const useFetchDocument = () =>{
+export const useFetchDocuments = () =>{
     
 }
