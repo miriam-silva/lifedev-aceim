@@ -1,7 +1,6 @@
-import styles from './Login.module.css';
-import { useEffect } from "react"
+import styles from './Login.module.css'
+import { useEffect, useState } from "react"
 import { useAuthentication } from '../../hooks/useAuthentication'
-import { useState } from "react"
 
 const Login = () => {
     const [email, setEmail] = useState("")
@@ -16,7 +15,7 @@ const Login = () => {
         setError("")
         const user = {
             email,
-            password
+            password,
         }
 
         const res = await login(user)
@@ -38,14 +37,28 @@ const Login = () => {
             <form onSubmit={handlerSubmit}>
                 <label>
                     <span>E-mail</span>
-                    <input type='email' name='email' required placeholder='E-mail do usuário' onChange={(e) => setEmail(e.target.value)} value={email} />
+                    <input
+                        type='email'
+                        name='email'
+                        required
+                        placeholder='E-mail do usuário'
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
+                    />
                 </label>
                 <label>
                     <span>Senha</span>
-                    <input type='password' name='password' required placeholder='Insira sua senha' onChange={(e) => setPassword(e.target.value)} value={password} />
+                    <input
+                        type='password'
+                        name='password'
+                        required
+                        placeholder='Insira sua senha'
+                        onChange={(e) => setPassword(e.target.value)}
+                        value={password}
+                    />
                 </label>
                 {!loading && <button className='btn'>Entrar</button>}
-                {!loading && <button className='btn' disabled>Aguarde...</button>}
+                {loading && <button className='btn' disabled>Aguarde...</button>}
                 {error && <p>{error}</p>}
             </form>
         </div>
