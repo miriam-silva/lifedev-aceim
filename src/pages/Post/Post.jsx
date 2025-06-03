@@ -1,4 +1,4 @@
-import styles from "./post.module.css"
+import styles from "./Post.module.css"
 
 import { useFetchDocument } from "../../hooks/useFetchDocument"
 import { useParams } from "react-router-dom"
