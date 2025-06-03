@@ -1,6 +1,6 @@
 import styles from "./Search.module.css"
 
-import { userFetchDocuments } from "../../hooks/userFetchDocuments"
+import { useFetchDocuments } from "../../hooks/useFetchDocuments"
 import { userQuery } from "../../hooks/userQuery"
 
 import PostDetail from "../../components/PostDetail"

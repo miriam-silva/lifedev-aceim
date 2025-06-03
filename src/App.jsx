@@ -8,7 +8,7 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Dashboard from './pages/Dashboard/Dashboard'
 import CreatePost from './pages/CreatePost/CreatePost'
-
+import Post from './pages/Post/Post'
 import { useAuthentication } from './hooks/useAuthentication';
 import { useState } from 'react';
  
@@ -20,7 +20,7 @@ function App() {
   const [user, setUser] = useState(undefined)
   const { auth } = useAuthentication()
  
-  const loadingUser = user == undefined
+  const loadingUser = user === undefined
  
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -28,7 +28,7 @@ function App() {
     })
   }, [auth])
  
-  if (!loadingUser) {
+  if (loadingUser) {
     return <p>Carregando a página... </p>
   }
  
@@ -46,6 +46,9 @@ function App() {
                 <Route path='/login' element={!user ? <Login/> : <Navigate to="/"/>} />
                 <Route path='/register' element={!user ? <Register/> : <Navigate to="/"/>} />
                 <Route path='/dashboard' element={user ? <Dashboard/> : <Navigate to="/login"/>} />
+                <Route path='/posts/:id' element={user ? <CreatePost/> : <Navigate to="login"/>} />
+                <Route path='/post/:id' element={user ? <Post/> : <Navigate to='/login'/>}></Route>
+                <Route path='/search' element={user ? <Search/> : <Navigate to='/login'/>}></Route>
               </Routes>
             </div>
             <Footer />
