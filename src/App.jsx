@@ -9,6 +9,7 @@ import Register from './pages/Register/Register'
 import Dashboard from './pages/Dashboard/Dashboard'
 import CreatePost from './pages/CreatePost/CreatePost'
 import Post from './pages/Post/Post'
+import Search from './pages/Search/Search'
 import { useAuthentication } from './hooks/useAuthentication';
 import { useState } from 'react';
  
